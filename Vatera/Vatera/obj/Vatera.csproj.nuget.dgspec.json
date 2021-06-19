@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tacha\\Desktop\\progtech beadando\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj": {}
+    "C:\\Users\\worge\\OneDrive\\EGYETEM\\4. Szemeszter\\Programozási Technológiák Gyakorlat\\ProgTek_bead\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tacha\\Desktop\\progtech beadando\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj": {
+    "C:\\Users\\worge\\OneDrive\\EGYETEM\\4. Szemeszter\\Programozási Technológiák Gyakorlat\\ProgTek_bead\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tacha\\Desktop\\progtech beadando\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj",
+        "projectUniqueName": "C:\\Users\\worge\\OneDrive\\EGYETEM\\4. Szemeszter\\Programozási Technológiák Gyakorlat\\ProgTek_bead\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj",
         "projectName": "Vatera",
-        "projectPath": "C:\\Users\\Tacha\\Desktop\\progtech beadando\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj",
-        "packagesPath": "C:\\Users\\Tacha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tacha\\Desktop\\progtech beadando\\Progtek_bead\\Vatera\\Vatera\\obj\\",
+        "projectPath": "C:\\Users\\worge\\OneDrive\\EGYETEM\\4. Szemeszter\\Programozási Technológiák Gyakorlat\\ProgTek_bead\\Progtek_bead\\Vatera\\Vatera\\Vatera.csproj",
+        "packagesPath": "C:\\Users\\worge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\worge\\OneDrive\\EGYETEM\\4. Szemeszter\\Programozási Technológiák Gyakorlat\\ProgTek_bead\\Progtek_bead\\Vatera\\Vatera\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Tacha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\worge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,10 +5,10 @@ using Vatera.Interface;
 
 namespace Vatera.Decorator
 {
-    public abstract class UserDecorator : IUser
+    public abstract class AUserDecorator : IUser
     {
         protected IUser user;
-        public UserDecorator(IUser user)
+        public AUserDecorator(IUser user)
         {
             this.user = user;
         }
