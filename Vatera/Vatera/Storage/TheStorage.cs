@@ -34,6 +34,17 @@ namespace Vatera.Storage
 			return false;
 			//show message : item dont found
 		}
+		public void productRemove(Subject product)
+        {
+			foreach (Subject item in ProductList)
+			{
+				if (product == item)
+				{
+					productlist.Remove(item);
+				}
+			}
+			//show message : item removed
+		}
 		
 		
 		public static TheStorage GetInstance()
