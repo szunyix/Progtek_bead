@@ -13,9 +13,9 @@ namespace Vatera.Decorator
             this.user = user;
         }
 
-        public virtual IUser CreateUser()
+        public virtual IUser CreateUser(string UserName, string Password, string Email)
         {
-            return user.CreateUser();
+            return user.CreateUser(UserName, Password, Email);
         }
 
         public virtual int getWishListedItems(IUser user)

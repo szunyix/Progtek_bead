@@ -29,21 +29,17 @@ namespace Vatera.Class
             //WishList = wishList;
         }*/
 
-        public IUser CreateUser()
+        public IUser CreateUser(string UserName, string Password, string Email)
         {
-            UserName = "defaultUserName";
-            Password = "defaultPassword";
-            Email = "defaultEmail";
+            this.UserName = UserName;
+            this.Password = Password;
+            this.Email = Email;
             Balance = 0;
 
             return this;
         }
 
-        public string getWishListedItem(int i, User user)
-        {
-            return user.WishList[i].ToString();
-        }
-
+        
         public string getWishListedItem(int i, IUser user)
         {
             throw new NotImplementedException();
