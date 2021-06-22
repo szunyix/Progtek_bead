@@ -21,17 +21,10 @@ namespace Vatera
             //string b = exampleUser.fu
             User testUser = new User();
 
-            testUser.CreateUser("Dávid", "Szunyix", "szunyix@gmail.com");
+            testUser.CreateUser("name", "pw", "email@gmail.com");
             MemberUserDecorator testMember = new MemberUserDecorator(testUser);
             //VerifiedMemberUserDecorator testVerified = new VerifiedMemberUserDecorator(testMember);
-
-            TheStorage asd = TheStorage.GetInstance();
-            TheStorage asd2 = TheStorage.GetInstance();
-            if (asd == asd2)
-            {
-                Console.WriteLine("A kettő ugyan az");
-            }
-
+         
 
         }
     }
