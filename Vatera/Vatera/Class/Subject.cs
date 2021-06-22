@@ -25,15 +25,31 @@ namespace Vatera.Class
             InStock = inStock;
         }
 
-        public void setInStock()
+        public void setInStock(Subject subject)
         {
-
+            if (subject.inStock == 0)
+                NotifyObserver(subject.productName.ToString());
+            //Storage.item.add(subject)
         }
 
-        public void NotifyObserver()
+        public void NotifyObserver(string ProductName)
         {
-            //foreach -> wishlist
-            //users.update()
+            foreach (IUser user in users)
+            {
+                CheckWishList(user);
+            }
+        }
+
+        //Check and Update
+        private void CheckWishList(IUser user)
+        {
+            string product;
+            for (int i = 0; i < user.getWishListedItems(user); i++)
+            {
+                product = user.getWishListedItem(i, user);
+                if (ProductName == product)
+                    user.update();
+            }
         }
 
         public void RegisterObserver(IObserver user)

@@ -7,6 +7,6 @@ namespace Vatera.Interface
     interface ISubject
     {
         void RegisterObserver(IObserver observer);
-        void NotifyObserver();
+        void NotifyObserver(string item);
     }
 }
