@@ -39,6 +39,16 @@ namespace Vatera.Class
             return this;
         }
 
+        public string getWishListedItem(int i, User user)
+        {
+            return user.WishList[i].ToString();
+        }
+
+        public int getWishListedItems(IUser user)
+        {
+            return WishList.Length;
+        }
+
         public void update()
         {
             
