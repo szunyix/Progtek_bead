@@ -22,6 +22,18 @@ namespace Vatera.Storage
         {
 			productlist.Add(product);
         }
+
+		public bool BeinProduct(Subject product)
+        {
+            foreach (Subject item in ProductList) {
+                if (product == item) {
+					return true;
+					//show message : item found
+				}			
+            }
+			return false;
+			//show message : item dont found
+		}
 		
 		
 		public static TheStorage GetInstance()
