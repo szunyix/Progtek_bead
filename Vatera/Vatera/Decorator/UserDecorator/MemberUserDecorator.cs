@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Vatera.Interface;
+using Vatera.Storage;
 using Vatera.Class;
 
 namespace Vatera.Decorator
@@ -12,9 +13,9 @@ namespace Vatera.Decorator
         {
         }
 
-        public IUser CreateUser()
+        public IUser CreateMemberUser(string UserName, string Password, string Email)
         {
-            user.CreateUser();
+            user.CreateUser(UserName, Password, Email);
             setMembership(user);
             return user;
         }
