@@ -25,5 +25,11 @@ namespace Vatera.Decorator
             User memberUser = (User)user;
             memberUser.Membership = "Member";
         }
+
+        public List<Subject> getStock(TheStorage storage)
+        {
+            throw new NotImplementedException("Storage needs methods for this.");
+            //return storage.getItems();
+        }
     }
 }
