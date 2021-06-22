@@ -50,7 +50,7 @@ namespace Vatera.Class
             {
                 product = user.getWishListedItem(i, user);
                 if (ProductName == product)
-                    user.update();
+                    user.notifyUser();
             }
         }
 

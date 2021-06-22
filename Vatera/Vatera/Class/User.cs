@@ -44,12 +44,17 @@ namespace Vatera.Class
             return user.WishList[i].ToString();
         }
 
+        public string getWishListedItem(int i, IUser user)
+        {
+            throw new NotImplementedException();
+        }
+
         public int getWishListedItems(IUser user)
         {
             return WishList.Length;
         }
 
-        public void update()
+        public void notifyUser()
         {
             
         }
