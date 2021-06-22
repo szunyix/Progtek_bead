@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using Vatera.Interface;
+using Vatera.Storage;
 
 namespace Vatera.Class
 {
-    public class Subject : ISubject
+    public class Subject : ISubject //product
     {
         private List<IObserver> users = new List<IObserver>();
 
@@ -29,7 +30,8 @@ namespace Vatera.Class
         {
             if (subject.inStock == 0)
                 NotifyObserver(subject.productName.ToString());
-            //Storage.item.add(subject)
+            TheStorage Storage = TheStorage.GetInstance();
+            Storage.productadd(subject);
         }
 
         public void NotifyObserver(string ProductName)
