@@ -7,8 +7,7 @@ namespace Vatera.Interface
     public interface IUser
     {
         IUser CreateUser();
-
-        void update();
+        void notifyUser();
 
         int getWishListedItems(IUser user);
 

@@ -6,6 +6,6 @@ namespace Vatera.Interface
 {
     public interface IObserver
     {
-        void update();
+        void notifyUser();
     }
 }
