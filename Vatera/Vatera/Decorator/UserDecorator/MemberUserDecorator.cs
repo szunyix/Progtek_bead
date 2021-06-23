@@ -10,6 +10,7 @@ namespace Vatera.Decorator
     class MemberUserDecorator : AUserDecorator, IWishList
     {
         public List<Item> WishList { get; set; }
+        public DateTime BannedUntil;
         public MemberUserDecorator(IUser user) : base(user)
         {
         }

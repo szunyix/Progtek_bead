@@ -6,6 +6,7 @@ namespace Vatera.Interface
 {
     public interface IUser
     {
-        IUser CreateUser(string UserName, string Password, string Email);       
+        IUser CreateUser(string UserName, string Password, string Email);
+        string getUserName();
     }
 }

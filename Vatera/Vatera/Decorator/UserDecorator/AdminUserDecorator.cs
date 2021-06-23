@@ -7,15 +7,16 @@ using Vatera.Storage;
 
 namespace Vatera.Decorator.UserDecorator
 {
-    class AdminUserDecorator : IUser
+    class AdminUserDecorator : AUserDecorator, IUser
     {
-        protected IUser user;
-        public AdminUserDecorator(IUser user)
+        protected IStorage storage;
+        public AdminUserDecorator(IUser user) : base(user)
         {
             this.user = user;
+            storage = IStorage.GetInstance();
         }
 
-        public IUser CreateUser(string UserName, string Password, string Email)
+        public override IUser CreateUser(string UserName, string Password, string Email)
         {
             user.CreateUser(UserName, Password, Email);
             setMembership(user);
@@ -34,9 +35,14 @@ namespace Vatera.Decorator.UserDecorator
             storage.productRemove(itemToRemove);
         }
 
-        public void addItem(TheStorage storage, Item itemToAdd)
+        public void addItem(Item itemToAdd)
         {
             storage.productadd(itemToAdd);
+        }
+
+        public void banMember(string memberUserName, DateTime untilWhen)
+        {
+            throw new NotImplementedException();
         }
     }
 }
