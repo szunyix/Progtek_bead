@@ -17,8 +17,7 @@ namespace Vatera.Class
         public double Balance { get; set; }
 
         public string Membership { get; set; }
-
-        public string[] WishList { get; set; }
+      
 
         /*public User(string userName, string password, string email, double balance)
         {
@@ -39,16 +38,6 @@ namespace Vatera.Class
             return this;
         }
 
-        
-        public string getWishListedItem(int i, IUser user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int getWishListedItems(IUser user)
-        {
-            return WishList.Length;
-        }
 
         public void notifyUser()
         {
