@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Vatera.Interface
 {
-    interface ISubject
+    public interface ISubject
     {
-        //void RegisterObserver(IWishList user);
+        void RegisterObserver(IUser user, ISubject item);
         void NotifyObserver(string item);
     }
 }
