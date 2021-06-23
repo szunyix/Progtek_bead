@@ -13,14 +13,20 @@ namespace Vatera.Storage
 	{
 		private static TheStorage uniqueInstance = null;
 
-		private List<Item> ProductList = new List<Item>();
-		public List<Item> productlist { get; }
+		private List<Item> productList = new List<Item>();
+		public List<Item> ProductList
+		{
+			get 
+			{
+				return productList;
+			}
+		}
 
 		private TheStorage() {	}
 
 		public void productadd(Item product)
         {
-			productlist.Add(product);
+			ProductList.Add(product);
         }
 
 		public bool BeinProduct(Item product)
@@ -34,13 +40,24 @@ namespace Vatera.Storage
 			return false;
 			//show message : item dont found
 		}
+		public Item getProductById(int Id)
+        {
+            foreach (Item item in ProductList)
+            {
+                if (Id == item.Id)
+                {
+					return item;
+                }
+            }
+			return null;
+        }
 		public void productRemove(Item product)
         {
 			foreach (Item item in ProductList)
 			{
 				if (product == item)
 				{
-					productlist.Remove(item);
+					ProductList.Remove(item);
 				}
 			}
 			//show message : item removed
