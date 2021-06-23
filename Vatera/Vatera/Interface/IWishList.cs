@@ -6,7 +6,7 @@ namespace Vatera.Interface
 {
     interface IWishList
     {
-        int getWishListedItems();
+        int NumberOfWishListedItems();
 
         string getWishListedItem(int indexOfItem);
 
