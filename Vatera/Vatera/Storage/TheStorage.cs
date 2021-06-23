@@ -9,7 +9,7 @@ using Vatera.Class;
 /// </summary>
 namespace Vatera.Storage
 {
-	public class TheStorage
+	public class TheStorage : IStorage //public Item getProductById
 	{
 		private static TheStorage uniqueInstance = null;
 
