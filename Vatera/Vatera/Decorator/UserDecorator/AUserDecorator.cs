@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Vatera.Class;
 using Vatera.Interface;
+using Vatera.Storage;
 
 namespace Vatera.Decorator
 {
@@ -16,6 +18,11 @@ namespace Vatera.Decorator
         public virtual IUser CreateUser(string UserName, string Password, string Email)
         {
             return user.CreateUser(UserName, Password, Email);
+        }
+
+        public virtual void addItem(TheStorage storage, Item itemToAdd)
+        {
+            storage.productadd(itemToAdd);
         }
 
         /*public virtual int getWishListedItems()
