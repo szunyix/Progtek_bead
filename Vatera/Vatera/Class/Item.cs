@@ -8,7 +8,7 @@ namespace Vatera.Class
 {
     public class Item : ISubject , IItem
     {
-        private List<IWishList> wishListedItems = new List<IWishList>();
+        private List<Wish> wishListedItems = new List<Wish>();
 
         private int id;
 
@@ -26,19 +26,40 @@ namespace Vatera.Class
         }
 
         private string productName;
-        public string ProductName { get; set; }  
+        public string ProductName {
+            get { return productName; }
+            set
+            {
+                if (value == null || value == "")
+                    throw new Exception("Product's name cannot be null!");
+                if (value.Length < 3)
+                    throw new Exception("ProductName must be at least 3 characters long!");
+                productName = value;
+            }
+        }  
 
         private double productPrice;
-        public double ProductPrice { get; set; }
+        public double ProductPrice {
+            get { return productPrice; }
+            set
+            {
+                if (value == 0)
+                    throw new Exception("Product cannot be free!");
+                productPrice = value;
+            }
+        }
 
         private int inStock;
-        public int InStock { get; set; }
+        public int InStock {
+            get { return inStock; }
+            set { inStock = value; }
+        }
 
         public Item(string productName, double productPrice, int inStock)
         {
             ProductName = productName;
             ProductPrice = productPrice;
-            InStock = inStock;
+            InStock += inStock;
         }
 
         public void setInStock(Item subject)
@@ -57,11 +78,10 @@ namespace Vatera.Class
             }
         }
 
-        //Check and Update
         private void CheckWishList(IWishList item)
         {
             string product;
-            for (int i = 0; i < item.getWishListedItems(); i++)
+            for (int i = 0; i < item.NumberOfWishListedItems(); i++)
             {
                 product = item.getWishListedItem(i);
                 if (ProductName == product)
@@ -69,6 +89,9 @@ namespace Vatera.Class
             }
         }
 
-        //Method for register observers-> add wished item to member
+        public void RegisterObserver(IUser user, ISubject item)
+        {
+            wishListedItems.Add(new Wish(user, item));
+        }
     }
 }
