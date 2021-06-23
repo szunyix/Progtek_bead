@@ -11,13 +11,13 @@ namespace Vatera.Prototype
         private String deliveryAddress;
         public String DeliveryAddress { set; get; }
 
-        private List<Subject> deliveryProduct;
-        public List<Subject> DeliveryProduct { set; get; }
+        private List<Item> deliveryProduct;
+        public List<Item> DeliveryProduct { set; get; }
 
         private String sojourn;
         public String Sojourn { set; get; }
 
-        public Plane(String deliveryAddress, List<Subject> deliveryProduct, String sojourn)
+        public Plane(String deliveryAddress, List<Item> deliveryProduct, String sojourn)
         {
 
         }
