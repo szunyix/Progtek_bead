@@ -9,6 +9,7 @@ namespace Vatera.Decorator
 {
     public abstract class AUserDecorator : IUser
     {
+        public List<Item> WishList { get; set; }
         protected IUser user;
         public AUserDecorator(IUser user)
         {
@@ -30,19 +31,19 @@ namespace Vatera.Decorator
             return user.getUserName();
         }
 
-        /*public virtual int getWishListedItems()
+        public virtual int getWishListedItems()
         {
-            return user.getWishListedItems(user);
+            return WishList.Count;
         }
 
-        public virtual string getWishListedItem(int i, IUser user)
+        public virtual string getWishListedItem(int indexOfItem)
         {
-            return user.getWishListedItem(i);
+            return WishList[indexOfItem].ToString();
         }
 
         public virtual void notifyUser()
         {
-            user.notifyUser();
-        }*/
+            notifyUser();
+        }
     }
 }
