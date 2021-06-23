@@ -24,7 +24,15 @@ namespace Vatera
             testUser.CreateUser("name", "pw", "email@gmail.com");
             MemberUserDecorator testMember = new MemberUserDecorator(testUser);
             //VerifiedMemberUserDecorator testVerified = new VerifiedMemberUserDecorator(testMember);
-         
+            TheStorage asd = TheStorage.GetInstance();
+            TheStorage asd3 = TheStorage.GetInstance();
+
+            asd.productadd(new Item("asd", 1.5, 3));
+
+            if (asd == asd3)
+            {
+                Console.WriteLine("még mindig jó");
+            }
 
         }
     }
