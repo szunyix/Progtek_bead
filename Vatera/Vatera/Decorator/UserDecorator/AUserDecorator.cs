@@ -25,6 +25,11 @@ namespace Vatera.Decorator
             storage.productadd(itemToAdd);
         }
 
+        public virtual string getUserName()
+        {
+            return user.getUserName();
+        }
+
         /*public virtual int getWishListedItems()
         {
             return user.getWishListedItems(user);

@@ -38,6 +38,10 @@ namespace Vatera.Class
             return this;
         }
 
+        public string getUserName()
+        {
+            return UserName;
+        }
 
         public void notifyUser()
         {
