@@ -9,13 +9,13 @@ namespace Vatera.Prototype
     class Plane : IPlane
     {
         private String deliveryAddress;
-        public String DeliveryAddress { set; get; }
+        public String DeliveryAddress { set { deliveryAddress = value; } get { return deliveryAddress; } }
 
         private List<Item> deliveryProduct;
-        public List<Item> DeliveryProduct { set; get; }
+        public List<Item> DeliveryProduct { set { deliveryProduct = value; } get { return deliveryProduct; } }
 
         private String sojourn;
-        public String Sojourn { set; get; }
+        public String Sojourn { set { sojourn = value; } get { return sojourn; } }
 
         public Plane(String deliveryAddress, List<Item> deliveryProduct, String sojourn)
         {
