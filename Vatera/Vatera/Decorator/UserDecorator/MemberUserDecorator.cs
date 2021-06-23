@@ -7,9 +7,8 @@ using Vatera.Class;
 
 namespace Vatera.Decorator
 {
-    class MemberUserDecorator : AUserDecorator, IWishList
-    {
-        public List<Item> WishList { get; set; }
+    class MemberUserDecorator : AUserDecorator
+    {      
         public DateTime BannedUntil;
         public MemberUserDecorator(IUser user) : base(user)
         {
@@ -32,16 +31,6 @@ namespace Vatera.Decorator
         {
             throw new NotImplementedException("Storage needs methods for this.");
             //return storage.getItems();
-        }
-
-        public string getWishListedItem(int indexOfItem)
-        {
-            return WishList[indexOfItem].ToString();
-        }
-
-        public int getWishListedItems()
-        {
-            return WishList.Count;
         }
 
         public void notifyMember()
