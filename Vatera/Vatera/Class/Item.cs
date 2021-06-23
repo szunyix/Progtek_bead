@@ -6,9 +6,9 @@ using Vatera.Storage;
 
 namespace Vatera.Class
 {
-    public class Subject : ISubject //product
+    public class Item : ISubject //product
     {
-        private List<IObserver> users = new List<IObserver>();
+        private List<IWishList> wishListedItems = new List<IWishList>();
 
         private string productName;
         public string ProductName { get; set; }
@@ -19,14 +19,14 @@ namespace Vatera.Class
         private int inStock;
         public int InStock { get; set; }
 
-        public Subject(string productName, double productPrice, int inStock)
+        public Item(string productName, double productPrice, int inStock)
         {
             ProductName = productName;
             ProductPrice = productPrice;
             InStock = inStock;
         }
 
-        public void setInStock(Subject subject)
+        public void setInStock(Item subject)
         {
             if (subject.inStock == 0)
                 NotifyObserver(subject.productName.ToString());
@@ -36,28 +36,24 @@ namespace Vatera.Class
 
         public void NotifyObserver(string ProductName)
         {
-            foreach (IUser user in users)
+            foreach (IWishList item in wishListedItems)
             {
-                CheckWishList(user);
+                CheckWishList(item);
             }
         }
 
         //Check and Update
-        private void CheckWishList(IUser user)
+        private void CheckWishList(IWishList item)
         {
             string product;
-            for (int i = 0; i < user.getWishListedItems(user); i++)
+            for (int i = 0; i < item.getWishListedItems(); i++)
             {
-                product = user.getWishListedItem(i, user);
+                product = item.getWishListedItem(i);
                 if (ProductName == product)
-                    user.notifyUser();
+                    item.notifyMember();
             }
         }
 
-        public void RegisterObserver(IObserver user)
-        {
-            Console.WriteLine("Observer hozzáadás");
-            users.Add(user);
-        }
+        //Method for register observers-> add wished item to member
     }
 }
