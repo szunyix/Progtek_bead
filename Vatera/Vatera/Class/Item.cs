@@ -6,12 +6,27 @@ using Vatera.Storage;
 
 namespace Vatera.Class
 {
-    public class Item : ISubject //product
+    public class Item : ISubject , IItem
     {
         private List<IWishList> wishListedItems = new List<IWishList>();
 
+        private int id;
+
+        public int Id
+        { 
+            get 
+            {
+                return id;
+            }
+
+            set 
+            {
+                id = value;    
+            }
+        }
+
         private string productName;
-        public string ProductName { get; set; }
+        public string ProductName { get; set; }  
 
         private double productPrice;
         public double ProductPrice { get; set; }
@@ -30,7 +45,7 @@ namespace Vatera.Class
         {
             if (subject.inStock == 0)
                 NotifyObserver(subject.productName.ToString());
-            TheStorage Storage = TheStorage.GetInstance();
+            IStorage Storage = IStorage.GetInstance();
             Storage.productadd(subject);
         }
 
