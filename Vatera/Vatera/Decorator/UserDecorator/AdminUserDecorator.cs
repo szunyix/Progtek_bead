@@ -10,9 +10,11 @@ namespace Vatera.Decorator.UserDecorator
     class AdminUserDecorator : IUser
     {
         protected IUser user;
+        protected IStorage storage;
         public AdminUserDecorator(IUser user)
         {
             this.user = user;
+            IStorage storage = IStorage.GetInstance();
         }
 
         public IUser CreateUser(string UserName, string Password, string Email)
@@ -34,9 +36,14 @@ namespace Vatera.Decorator.UserDecorator
             storage.productRemove(itemToRemove);
         }
 
-        public void addItem(TheStorage storage, Item itemToAdd)
+        public void addItem(Item itemToAdd)
         {
             storage.productadd(itemToAdd);
+        }
+
+        public void banMember(string memberUserName, DateTime untilWhen)
+        {
+            throw new NotImplementedException();
         }
     }
 }
