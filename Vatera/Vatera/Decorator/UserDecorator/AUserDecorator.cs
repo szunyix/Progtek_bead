@@ -18,19 +18,19 @@ namespace Vatera.Decorator
             return user.CreateUser(UserName, Password, Email);
         }
 
-        public virtual int getWishListedItems(IUser user)
+        /*public virtual int getWishListedItems()
         {
             return user.getWishListedItems(user);
         }
 
         public virtual string getWishListedItem(int i, IUser user)
         {
-            return user.getWishListedItem(i, user);
+            return user.getWishListedItem(i);
         }
 
         public virtual void notifyUser()
         {
             user.notifyUser();
-        }
+        }*/
     }
 }
