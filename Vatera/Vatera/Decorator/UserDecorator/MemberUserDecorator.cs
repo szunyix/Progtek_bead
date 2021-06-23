@@ -35,7 +35,7 @@ namespace Vatera.Decorator
 
         public void notifyMember()
         {
-            //foreach members -> cw...
+            Console.WriteLine("Hello " + this.user.getUserName().ToString() + ", your wished item is now available!");
         }
     }
 }
