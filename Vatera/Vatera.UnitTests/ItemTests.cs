@@ -14,7 +14,7 @@ namespace Vatera.Class.UnitTests
         public void RegisterObserver_Success()
         {
             //Arrange
-            Item item = new Item("PS4", 250, 5);
+            Item item = new Item(1, "PS4", 250, 5);
             User user = new User();
             user.CreateUser("username", "password", "email@email.com");
 
