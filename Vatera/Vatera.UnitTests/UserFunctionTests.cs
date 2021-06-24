@@ -16,7 +16,7 @@ namespace Vatera.UnitTests
             AdminUserDecorator adminUser = new AdminUserDecorator(new User());
             adminUser.CreateUser("username", "password", "email@email.com");
             TheStorage storage = TheStorage.GetInstance();
-            Item itemToAdd = new Item("testProduct", 999, 1);
+            Item itemToAdd = new Item(1,"testProduct", 999, 1);
 
             //Act
             adminUser.addItem(itemToAdd);
