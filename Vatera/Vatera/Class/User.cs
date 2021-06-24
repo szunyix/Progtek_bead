@@ -7,14 +7,61 @@ namespace Vatera.Class
 {
     public class User : IObserver, IUser
     {
-        
-        public string UserName { get; set; }
+        private string userName;
+        public string UserName {
+            get
+            {
+                return userName;
+            }
+            set
+            {
+                if (value.Length < 6)
+                    throw new Exception("Username must be at least 6 characters long!");
+                userName = value;
+            }
+        }
 
-        public string Password { get; set; }
+        private string password;
+        public string Password {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                if (value.Length < 6)
+                    throw new Exception("Password must be at least 6 characters long!");
+                password = value;
+            }
+        }
 
-        public string Email { get; set; }
+        private string email;
+        public string Email {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                if (!value.Contains('@'))
+                    throw new Exception("Email must be a valid address!");
+                email = value;
+            }
+        }
 
-        public double Balance { get; set; }
+        private double balance;
+        public double Balance {
+            get
+            {
+                return balance;
+            }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Balance cannot go under $0");
+                balance = value;
+            }
+        }
 
         public string Membership { get; set; }
       
