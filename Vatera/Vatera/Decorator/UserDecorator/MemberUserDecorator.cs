@@ -7,7 +7,7 @@ using Vatera.Class;
 
 namespace Vatera.Decorator
 {
-    class MemberUserDecorator : AUserDecorator
+    public class MemberUserDecorator : AUserDecorator
     {      
         public DateTime BannedUntil;
         public MemberUserDecorator(IUser user) : base(user)

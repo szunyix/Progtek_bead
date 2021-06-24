@@ -7,7 +7,7 @@ using Vatera.Storage;
 
 namespace Vatera.Decorator.UserDecorator
 {
-    class AdminUserDecorator : AUserDecorator, IUser
+    public class AdminUserDecorator : AUserDecorator, IUser
     {
         protected IStorage storage;
         public AdminUserDecorator(IUser user) : base(user)
