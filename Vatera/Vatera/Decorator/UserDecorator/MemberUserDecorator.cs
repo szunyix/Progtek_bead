@@ -5,7 +5,7 @@ using Vatera.Interface;
 using Vatera.Storage;
 using Vatera.Class;
 
-namespace Vatera.Decorator
+namespace Vatera.Decorator.UserDecorator
 {
     public class MemberUserDecorator : AUserDecorator
     {      
