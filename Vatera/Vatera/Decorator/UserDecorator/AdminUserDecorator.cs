@@ -13,7 +13,7 @@ namespace Vatera.Decorator.UserDecorator
         public AdminUserDecorator(IUser user) : base(user)
         {
             this.user = user;
-            storage = IStorage.GetInstance();
+            storage = TheStorage.GetInstance();
         }
 
         public override IUser CreateUser(string UserName, string Password, string Email)
