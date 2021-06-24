@@ -6,7 +6,7 @@ using Vatera.Storage;
 
 namespace Vatera.Interface
 {
-    interface IStorage
+    public interface IStorage
     {
         public Item getProductById(int Id);
         public static TheStorage GetInstance() => throw new NotImplementedException();

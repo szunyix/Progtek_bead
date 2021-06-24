@@ -55,8 +55,9 @@ namespace Vatera.Class
             set { inStock = value; }
         }
 
-        public Item(string productName, double productPrice, int inStock)
+        public Item(int id, string productName, double productPrice, int inStock)
         {
+            Id = id;
             ProductName = productName;
             ProductPrice = productPrice;
             InStock += inStock;
@@ -92,6 +93,12 @@ namespace Vatera.Class
         public void RegisterObserver(IUser user, ISubject item)
         {
             wishListedItems.Add(new Wish(user, item));
+        }
+
+        public override bool Equals(object obj)
+        {
+            Item otherItem = (Item)obj;
+            return this.productName == otherItem.productName;
         }
     }
 }

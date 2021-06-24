@@ -7,13 +7,13 @@ using Vatera.Storage;
 
 namespace Vatera.Decorator.UserDecorator
 {
-    class AdminUserDecorator : AUserDecorator, IUser
+    public class AdminUserDecorator : AUserDecorator, IUser
     {
         protected IStorage storage;
         public AdminUserDecorator(IUser user) : base(user)
         {
             this.user = user;
-            storage = IStorage.GetInstance();
+            storage = TheStorage.GetInstance();
         }
 
         public override IUser CreateUser(string UserName, string Password, string Email)
