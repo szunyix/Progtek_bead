@@ -93,5 +93,11 @@ namespace Vatera.Class
         {
             wishListedItems.Add(new Wish(user, item));
         }
+
+        public override bool Equals(object obj)
+        {
+            Item otherItem = (Item)obj;
+            return this.productName == otherItem.productName;
+        }
     }
 }
