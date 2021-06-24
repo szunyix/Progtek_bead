@@ -55,8 +55,9 @@ namespace Vatera.Class
             set { inStock = value; }
         }
 
-        public Item(string productName, double productPrice, int inStock)
+        public Item(int id, string productName, double productPrice, int inStock)
         {
+            Id = id;
             ProductName = productName;
             ProductPrice = productPrice;
             InStock += inStock;
